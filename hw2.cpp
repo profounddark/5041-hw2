@@ -1,3 +1,7 @@
+// Andrew Asplund
+// January 29, 2023
+// version 1.0
+
 #include <iostream>
 #include <string>
 
@@ -5,7 +9,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-
+// constants limiting the scope of conversion
+// ASSUMPTION: this converts up to 16 bit binary numbers
 const int UNSIGNED_MAXIMUM_VALUE = 65535;
 const int SIGNED_MAXIMUM_VALUE = 32767;
 const int SIGNED_MINIMUM_VALUE = -32768;
@@ -18,6 +23,12 @@ const int SIGNED_MINIMUM_VALUE = -32768;
  */
 std::string positiveBinaryConverter(unsigned int numberToConvert);
 
+/**
+ * signedBinaryConverter converts an integer into a 16-bit binary
+ * string in 2s complement notation.
+ * @param numberToConvert the integer to convert
+ * @return a string representation of a 16-bit binary number.
+ */
 std::string signedBinaryConverter(int numberToConvert);
 
 /**
